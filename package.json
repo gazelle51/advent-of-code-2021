@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "https://adventofcode.com/2021",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "random": "node index.js random",
+    "day1": "node index.js 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gazelle51/advent-of-code-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gazelle51/advent-of-code-2021/issues"
+  },
+  "homepage": "https://github.com/gazelle51/advent-of-code-2021#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
