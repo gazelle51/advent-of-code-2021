@@ -12,6 +12,10 @@ function run() {
 
   console.log('Successfully loaded input data');
   console.log();
+
+  // Convert data to array
+  const dataNew = data.split('\n');
+  console.log(dataNew);
 }
 
 module.exports = { run };
