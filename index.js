@@ -21,6 +21,10 @@ switch (solutionNum) {
     solutionModule = 'day01';
     break;
 
+  case 2:
+    solutionModule = 'day02';
+    break;
+
   default:
     console.log('No valid number provided, selecting a random solution');
 
