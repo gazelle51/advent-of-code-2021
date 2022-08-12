@@ -6,7 +6,7 @@ const path = require('path');
  */
 function run() {
   // Load input
-  const jsonPath = path.join(__dirname, 'input.txt');
+  const jsonPath = path.join(__dirname, 'input-small.txt');
   const dataRaw = fs.readFileSync(jsonPath);
   const data = dataRaw.toString();
 
