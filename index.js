@@ -13,29 +13,20 @@ if (process.argv.length === 3 && !process.argv.includes('random')) {
   console.log();
 }
 
-// Get path to code
+// Get folder for the requested day
 let solutionModule = undefined;
-switch (solutionNum) {
-  // TODO: refactor to if ... else ...
-  case 1:
-    solutionModule = 'day01';
-    break;
+if (solutionNum >= 1 && solutionNum <= 2) {
+  solutionModule = 'day' + solutionNum.toLocaleString(undefined, { minimumIntegerDigits: 2 });
+} else {
+  console.log('No valid number provided, selecting a random solution');
 
-  case 2:
-    solutionModule = 'day02';
-    break;
+  const possibleSolutions = [];
 
-  default:
-    console.log('No valid number provided, selecting a random solution');
+  fs.readdirSync('./src', { withFileTypes: true }).forEach((dirent) => {
+    if (dirent.isDirectory() && dirent.name.startsWith('day')) possibleSolutions.push(dirent.name);
+  });
 
-    const possibleSolutions = [];
-
-    fs.readdirSync('./src', { withFileTypes: true }).forEach((dirent) => {
-      if (dirent.isDirectory() && dirent.name.startsWith('day'))
-        possibleSolutions.push(dirent.name);
-    });
-
-    solutionModule = possibleSolutions[Math.floor(Math.random() * possibleSolutions.length)];
+  solutionModule = possibleSolutions[Math.floor(Math.random() * possibleSolutions.length)];
 }
 
 // Run code
