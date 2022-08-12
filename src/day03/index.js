@@ -53,6 +53,8 @@ function run() {
   console.log('What is the power consumption of the submarine?');
   console.log(gammaDecimal * epsilonDecimal);
   console.log();
+
+  // Up to part 2
 }
 
 module.exports = { run };
