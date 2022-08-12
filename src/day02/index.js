@@ -33,6 +33,22 @@ function run() {
   console.log('What is the horizontal position multiplied by the depth?');
   console.log(position[0] * position[1]);
   console.log();
+
+  // Initialise position2 (horizontal position, depth, aim)
+  const position2 = [0, 0, 0];
+
+  // Move submarine according to directions
+  for (const [dir, units] of directions) {
+    if (dir == 'forward') {
+      position2[0] += units;
+      position2[1] += position2[2] * units;
+    } else if (dir == 'down') position2[2] += units;
+    else if (dir == 'up') position2[2] -= units;
+  }
+
+  console.log('What is the horizontal position multiplied by the depth with the new instructions?');
+  console.log(position2[0] * position2[1]);
+  console.log();
 }
 
 module.exports = { run };
