@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "random": "node index.js random",
-    "day1": "node index.js 1",
+    "day": "node index.js $npm_config_num", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
