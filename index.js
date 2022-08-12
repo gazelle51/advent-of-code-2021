@@ -15,7 +15,7 @@ if (process.argv.length === 3 && !process.argv.includes('random')) {
 
 // Get folder for the requested day
 let solutionModule = undefined;
-if (solutionNum >= 1 && solutionNum <= 2) {
+if (solutionNum >= 1 && solutionNum <= 3) {
   solutionModule = 'day' + solutionNum.toLocaleString(undefined, { minimumIntegerDigits: 2 });
 } else {
   console.log('No valid number provided, selecting a random solution');
