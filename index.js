@@ -16,6 +16,7 @@ if (process.argv.length === 3 && !process.argv.includes('random')) {
 // Get path to code
 let solutionModule = undefined;
 switch (solutionNum) {
+  // TODO: refactor to if ... else ...
   case 1:
     solutionModule = 'day01';
     break;
